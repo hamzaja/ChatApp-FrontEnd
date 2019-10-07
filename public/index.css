@@ -204,7 +204,6 @@ input:hover, button {
   display: inline;
   padding: 0.5em 1em 0.5em 0.5em;
 }
-
 .submit:hover {
   background-color: #00CB00;
   transition: 0.4s;
@@ -268,6 +267,15 @@ input[type="text"]{
   font-size: 1em;
   transition: 0.3s;
 }
+
+
+.message-form-div{
+ flex-direction: column;
+ /* justify-content: center; */
+ align-items: center;
+ position: relative;
+ margin-top: 50px;
+ font-family: "Montserrat";
 
 input[type="text"]:focus{
   padding: 10px;
