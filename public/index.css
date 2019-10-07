@@ -107,6 +107,11 @@ input:hover, button {
   height:5em;
 }
 
+.offlineUsers:focus {
+  background-color: orange;
+  /* transition: 0.5s; */
+}
+
 .logoutButton {
   display: flex;
   padding: 1em 0.5em 1em 0.5em;
@@ -131,6 +136,10 @@ input:hover, button {
 
 .allUsers:hover {
   cursor: pointer;
+}
+
+.loggedInUser:hover {
+  cursor: default;
 }
 
 /*************** Users Pages End *******************/
@@ -158,6 +167,7 @@ input:hover, button {
   text-shadow: 5px 5px 4px #000000;
   text-align: center;
   font-size: 2em;
+  cursor: default;
 }
 
 .chatroom {
@@ -207,7 +217,6 @@ input:hover, button {
 .message-sender-receiver {
 	font-family: "Helvetica Neue";
 	font-size: 20px;
-	font-weight: normal;
   max-width: 70vw;
 	margin: 1em auto;
   display: flex;
@@ -219,32 +228,45 @@ input:hover, button {
   word-wrap: break-word;
   margin-bottom: 12px;
   line-height: 24px;
-  position: relative;
 	padding: 0.25em;
   border-radius: 25px;
 
 }
 
 .sender {
-	color: white;
+	color: #FFFFFF;
 	background: #0B93F6;
 	align-self: flex-end;
   border-radius: 25px;
   box-shadow: 8px 8px 8px #000000;
-  width: 40vw;
+  width: 50vw;
 }
 
 .receiver {
 	background: #E5E5EA;
-	color:black;
+	color: black;
   border-radius: 25px;
   box-shadow: 8px 8px 8px #000000;
   text-shadow: 1px 1px 1px #F1F1F1;
-  width: 40vw;
+  width: 50vw;
 }
-
-
 /*************** EachMessage Ends ************/
+
+/************** Submit button *********************/
+input[type="text"]{
+  align-items: center;
+  display: inline-block;
+  width: 500px;
+  height: 40px;
+  box-sizing: border-box;
+  border: 1px solid #A9A9A9;
+  border-radius: 3px;
+  padding: 10px 10px 10px 100px;
+  transition: all 0.1s ease-out;
+  box-shadow: 5px 5px 5px #FFFFFF;
+  font-size: 1em;
+  transition: 0.3s;
+}
 
 
 .message-form-div{
@@ -254,41 +276,27 @@ input:hover, button {
  position: relative;
  margin-top: 50px;
  font-family: "Montserrat";
+
+input[type="text"]:focus{
+  padding: 10px;
+  width: 70%;
+  transition: all 0.3s ease-in;
 }
-/************** Submit button *********************/
- input[type="text"]{
- align-items: center;
- display: inline-block;
- width: 500px;
- height: 40px;
- box-sizing: border-box;
- outline: none;
- border: 1px solid lightgray;
- border-radius: 3px;
- padding: 10px 10px 10px 100px;
- transition: all 0.1s ease-out;
- }
 
- input[type="text"]:focus{
- padding: 10px;
- width: 70%;
- transition: all 0.3s ease-in;
- }
+input[type="submit"] {
+  border:2px solid orange;
+  text-shadow: 2px 2px 2px #FFFFFF;
+  padding:5px 20px;
+  font-size:30px;
+  background:repeating-linear-gradient(to right,#00CB00 0,#00CB00 4px,#00CB00 4px, #00CB00 8px) center/0px 100%  no-repeat;
+  transition:0.2s all linear;
+  align-items: center;
+}
+input[type="submit"]:hover {
+  background-size:100% 100%;
+}
 
- input[type="submit"] {
-   border:2px solid orange;
-   text-shadow: 2px 2px 2px #FFFFFF;
-   padding:5px 20px;
-   font-size:30px;
-   background:repeating-linear-gradient(to right,#00CB00 0,#00CB00 4px,#00CB00 4px, #00CB00 8px) center/0px 100%  no-repeat;
-   transition:0.2s all linear;
-   align-items: center;
- }
- input[type="submit"]:hover {
-   background-size:100% 100%;
- }
-
- .submit {
-   box-shadow: 5px 5px 5px #FFFFFF;
- }
+.submit {
+  box-shadow: 5px 5px 5px #FFFFFF;
+}
  /************** Submit button ends *********************/
