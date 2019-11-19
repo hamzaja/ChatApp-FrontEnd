@@ -19,18 +19,23 @@ state = {
 }
 
 componentDidMount() {
-  setInterval(()=>{
+  this.interval1 = setInterval(()=>{
     fetch("https://lets-chat-flatiron.herokuapp.com/users")
     .then(res => res.json())
     .then(users => this.setState({ users }))
   }, 1000)
 
-   setInterval(()=>{
+   this.interval2 = setInterval(()=>{
      fetch("https://lets-chat-flatiron.herokuapp.com/chat_boxes")
      .then(res=> res.json())
      .then(allmessages => {this.setState({ allmessages }) })
    }, 1000)
     }
+
+  componentWillUnmount() {
+    clearInterval(this.interval1);
+    clearInterval(this.interval2)
+ }
 
 chatWithThisUser = (user) => {
   this.setState({chatPerson: user})
@@ -38,8 +43,6 @@ chatWithThisUser = (user) => {
 
 chatid = (id) => {
   this.setState({chatid: id})
-  console.log(id);
-  console.log(this.state.chatPerson.id)
   setInterval(()=>{
   this.setState({userMessages: []})
   this.state.allmessages.map(message => {
@@ -49,7 +52,6 @@ chatid = (id) => {
         (message.user_id === this.state.chatPerson.id && this.state.chatid === message.chat_id)
       )
       {
-        console.log(message.chat_id)
         this.setState({ userMessages: [...this.state.userMessages , message]})
       }
     })

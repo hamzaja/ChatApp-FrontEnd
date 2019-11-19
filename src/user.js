@@ -13,7 +13,6 @@ class User extends React.Component{
       let chatPeople = [localStorage.name,this.props.user.name].sort().join()
 
         this.setState({chatPeople})
-        console.log(chatPeople)
       }
       fetch("https://lets-chat-flatiron.herokuapp.com/chats")
       .then(res=> res.json())
