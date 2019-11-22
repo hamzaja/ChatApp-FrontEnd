@@ -254,6 +254,7 @@ input:hover, button {
 
 /************** Submit button *********************/
 input[type="text"]{
+  color: black;
   align-items: center;
   display: inline-block;
   width: 500px;
@@ -271,11 +272,12 @@ input[type="text"]{
 
 .message-form-div{
  flex-direction: column;
- /* justify-content: center; */
+ justify-content: center;
  align-items: center;
  position: relative;
  margin-top: 50px;
  font-family: "Montserrat";
+}  
 
 input[type="text"]:focus{
   padding: 10px;
