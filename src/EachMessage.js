@@ -10,8 +10,6 @@ render(){
       </div>
     )
   }
-
-
 }
 
 export default EachMessage;
