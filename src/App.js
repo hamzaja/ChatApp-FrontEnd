@@ -23,7 +23,7 @@ componentDidMount() {
     fetch("https://lets-chat-flatiron.herokuapp.com/users")
     .then(res => res.json())
     .then(users => this.setState({ users }))
-  }, 1000)
+  }, 800)
 
    this.interval2 = setInterval(()=>{
      fetch("https://lets-chat-flatiron.herokuapp.com/chat_boxes")
@@ -37,9 +37,9 @@ componentDidMount() {
     clearInterval(this.interval2)
  }
 
-chatWithThisUser = (user) => {
-  this.setState({chatPerson: user})
-}
+  chatWithThisUser = (user) => {
+    this.setState({chatPerson: user})
+  }
 
 chatid = (id) => {
   this.setState({chatid: id})
