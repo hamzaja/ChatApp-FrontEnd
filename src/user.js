@@ -44,7 +44,6 @@ class User extends React.Component{
     })
   }
 
-
   sendUserInfo = () => {
     this.props.chatWithThisUser(this.props.user);
     this.sendChatInfo()
