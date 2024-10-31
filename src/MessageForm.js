@@ -37,7 +37,6 @@ render(){
     )
   }
 
-
 }
 
 export default MessageForm;

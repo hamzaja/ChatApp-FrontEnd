@@ -22,7 +22,6 @@ renderMessage = () => {
       null
     )
   }
-
 }
 
 export default Messages;

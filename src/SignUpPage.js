@@ -34,7 +34,6 @@ class SignUpPage extends Component {
 
   }
 
-
   render() {
     return (
       <div>
